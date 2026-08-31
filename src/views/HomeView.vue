@@ -54,10 +54,12 @@ function removeSkill(index: number) {
     <!-- TODO Day 1B: replace the hardcoded "Skills" heading with
          "Skills ({{ skillCount }})" once you've added the computed -->
     <h3>Skills</h3>
-    <ul>
-      <li v-for="skill in skills" :key="skill">{{ skill }}</li>
+    <ul class="skills">
       <!-- TODO Day 1A: d) Render the skills list using "li" + `v-for`
+             CH: doppelpunkt vor key für Reaktiviät; key angeben, damit jeder eintrag einen key hat (für löschen u.ä. notwendig) und damit jeder Eintrag einen key hat, ist es skill und nicht skills - bei skills wäre es nur ein key für alle skills
            Bonus: text-input should also add skill on <ENTER> -->
+      <li v-for="skill in skills" :key="skill">{{ skill }}</li>
+
       <!-- Bonus: <button @click="removeSkill(skills.indexOf(skill))">×</button> -->
 
       <!-- TODO Day 1A: just for showing first output: Remove when implementation of v-for is done -->
