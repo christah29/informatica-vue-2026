@@ -6,11 +6,12 @@ import { ref, computed, watch, onMounted } from 'vue'
 // ---------------------------------------------------------------------------
 
 // TODO Day 1A: a) replace with your own name and bio
-const name = 'Your Name'
-const bio = 'A short sentence about who you are and what you do.'
+const name = 'Christa'
+const bio =
+  'UX research with focus on medical/health care. Programming: mainly working with php and javascript'
 
 // TODO Day 1A: b) replace with your own skills
-const skills = ['HTML', 'CSS', 'JavaScript']
+const skills = ['JavaScript', 'PHP', 'HTML', 'CSS']
 
 const newSkill = ref('')
 
@@ -59,7 +60,9 @@ function removeSkill(index: number) {
       <!-- Bonus: <button @click="removeSkill(skills.indexOf(skill))">×</button> -->
 
       <!-- TODO Day 1A: just for showing first output: Remove when implementation of v-for is done -->
-      {{ skills }}
+      {{
+        skills
+      }}
     </ul>
 
     <!-- TODO Day 1A: e) wire up v-model and the addSkill button
