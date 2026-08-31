@@ -8,7 +8,7 @@ import { ref, computed, watch, onMounted } from 'vue'
 // TODO Day 1A: a) replace with your own name and bio
 const name = 'Christa'
 const bio =
-  'UX research with focus on medical/health care. Programming: mainly working with php and javascript'
+  'UX research with focus on medical/health care. Programming: mainly working with php and javascript.'
 
 // TODO Day 1A: b) replace with your own skills
 const skills = ['JavaScript', 'PHP', 'HTML', 'CSS']
@@ -54,15 +54,13 @@ function removeSkill(index: number) {
     <!-- TODO Day 1B: replace the hardcoded "Skills" heading with
          "Skills ({{ skillCount }})" once you've added the computed -->
     <h3>Skills</h3>
-    <ul class="skills">
+    <ul>
+      <li v-for="skill in skills" :key="skill">{{ skill }}</li>
       <!-- TODO Day 1A: d) Render the skills list using "li" + `v-for`
            Bonus: text-input should also add skill on <ENTER> -->
       <!-- Bonus: <button @click="removeSkill(skills.indexOf(skill))">×</button> -->
 
       <!-- TODO Day 1A: just for showing first output: Remove when implementation of v-for is done -->
-      {{
-        skills
-      }}
     </ul>
 
     <!-- TODO Day 1A: e) wire up v-model and the addSkill button
